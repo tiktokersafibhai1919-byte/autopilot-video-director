@@ -1,0 +1,195 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #090d16;
+    color: #f8fafc;
+    padding: 16px;
+    line-height: 1.5;
+}
+
+.app-container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #8b5cf626;
+    color: #c4b5fd;
+    border: 1px solid #8b5cf655;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+header h1 {
+    font-size: 1.65rem;
+    color: #f8fafc;
+}
+
+header p {
+    color: #94a3b8;
+    font-size: 0.9rem;
+}
+
+.workspace {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.control-panel {
+    flex: 1.3;
+    min-width: 300px;
+    background-color: #131b2e;
+    padding: 18px;
+    border-radius: 12px;
+    border: 1px solid #26334d;
+}
+
+.monitor-panel {
+    flex: 0.9;
+    min-width: 280px;
+    background-color: #131b2e;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #26334d;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 14px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    color: #cbd5e1;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+}
+
+small {
+    display: block;
+    color: #38bdf8;
+    margin-top: 4px;
+    font-size: 0.8rem;
+}
+
+input[type="file"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #334155;
+    background-color: #0b101d;
+    color: #f8fafc;
+    font-size: 0.9rem;
+}
+
+.button-row {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: white;
+}
+
+#previewBtn {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+}
+
+#exportBtn {
+    background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.status-box {
+    margin-top: 14px;
+    padding: 10px;
+    background-color: #0b101d;
+    border-left: 4px solid #38bdf8;
+    border-radius: 6px;
+    font-size: 0.88rem;
+    color: #e2e8f0;
+}
+
+.rules-box {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #10b98118;
+    border: 1px solid #10b98144;
+    border-radius: 6px;
+    font-size: 0.82rem;
+    color: #6ee7b7;
+}
+
+.hidden {
+    display: none;
+}
+
+.canvas-wrapper {
+    width: 100%;
+    max-width: 270px;
+    margin: 0 auto;
+    aspect-ratio: 9 / 16;
+    background-color: #000000;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 2px solid #334155;
+}
+
+canvas {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.timeline-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #0b101d;
+    border-radius: 4px;
+    margin-top: 12px;
+    overflow: hidden;
+}
+
+.timeline-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #38bdf8, #8b5cf6);
+    transition: width 0.1s linear;
+}
+
+.timeline-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    font-size: 0.82rem;
+    color: #94a3b8;
+}
+
+#activeSfxBadge {
+    color: #fbbf24;
+    font-weight: 600;
+}
