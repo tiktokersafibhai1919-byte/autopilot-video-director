@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autopilot 9:16 Video Director</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <header>
+            <span class="badge">AI Timeline Engine • WebAudio SFX</span>
+            <h1>🎬 Autopilot 9:16 Video Director</h1>
+            <p>Instruction-Driven Auto-Assembler, Procedural SFX & Caption Burner</p>
+        </header>
+
+        <div class="workspace">
+            <!-- Left Panel: Director Controls -->
+            <section class="control-panel">
+                <div class="form-group">
+                    <label for="videoFiles">1. Select 9:16 Video Clips (2 to 5 Clips):</label>
+                    <input type="file" id="videoFiles" accept="video/*" multiple>
+                    <small id="fileCountLabel">No clips selected yet</small>
+                </div>
+
+                <div class="form-group">
+                    <label for="voiceoverFile">2. Voiceover Audio (Optional .mp3 / .wav):</label>
+                    <input type="file" id="voiceoverFile" accept="audio/*">
+                </div>
+
+                <div class="form-group">
+                    <label for="directorPrompt">3. Director Autopilot Instructions:</label>
+                    <textarea id="directorPrompt" rows="3" placeholder="e.g., Fast 3s cuts, dramatic zoom, deep bass drop, whoosh transitions, dark moody contrast, bold yellow captions">Fast 3.5s cuts, dramatic zoom, deep bass drop, whoosh transitions, dark moody contrast, bold yellow captions</textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="captionScript">4. Script for Auto-Burned Captions:</label>
+                    <textarea id="captionScript" rows="4" placeholder="Paste your 30-second voiceover script here...">Most people assume pouring concrete underwater is impossible. Engineers use pressurized tremie pipes and anti-washout chemistry. One millimeter of error can collapse the entire foundation.</textarea>
+                </div>
+
+                <div class="button-row">
+                    <button id="previewBtn" onclick="runAutopilot(false)">▶️ Autopilot Preview</button>
+                    <button id="exportBtn" onclick="runAutopilot(true)">⏺️ Render & Download Video</button>
+                </div>
+
+                <div id="statusBox" class="status-box">Ready. Load clips and hit Autopilot!</div>
+                <div id="parsedRulesBox" class="rules-box hidden"></div>
+            </section>
+
+            <!-- Right Panel: 9:16 Live Canvas Monitor -->
+            <section class="monitor-panel">
+                <div class="canvas-wrapper">
+                    <canvas id="studioCanvas" width="540" height="960"></canvas>
+                </div>
+                <div class="timeline-bar">
+                    <div id="timelineProgress" class="timeline-fill"></div>
+                </div>
+                <div class="timeline-info">
+                    <span id="timeDisplay">00:00 / 00:00</span>
+                    <span id="activeSfxBadge">🔇 SFX Idle</span>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
