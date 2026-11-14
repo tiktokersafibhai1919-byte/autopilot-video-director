@@ -22,6 +22,15 @@ header {
     margin-bottom: 20px;
 }
 
+.top-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+}
+
 .badge {
     display: inline-block;
     background-color: #8b5cf626;
@@ -31,7 +40,18 @@ header {
     border-radius: 20px;
     font-size: 0.78rem;
     font-weight: 600;
-    margin-bottom: 6px;
+}
+
+.creator-badge {
+    display: inline-block;
+    background: linear-gradient(135deg, #0284c733, #10b98133);
+    color: #38bdf8;
+    border: 1px solid #38bdf877;
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
 }
 
 header h1 {
@@ -192,4 +212,17 @@ canvas {
 #activeSfxBadge {
     color: #fbbf24;
     font-weight: 600;
+}
+
+.studio-footer {
+    text-align: center;
+    margin-top: 22px;
+    padding-top: 14px;
+    border-top: 1px solid #1e293b;
+    color: #64748b;
+    font-size: 0.84rem;
+}
+
+.studio-footer strong {
+    color: #38bdf8;
 }
